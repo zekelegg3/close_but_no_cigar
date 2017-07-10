@@ -8,6 +8,6 @@ class Grand_Bash_test < Minitest::Test
    def test_the_winning_numbers
    my_ticket = "6969"
 	winning_nums = ["1234", "5678", "9101", "1121", "3141", "6969"]
-   	assert_equal([],array_winning(my_ticket,winning_nums))
+   	assert_equal(["6969"],array_winning(my_ticket, winning_nums))
    end
 end

@@ -15,21 +15,26 @@ def array_winning(my_ticket, winning_nums)
 
 end
 def array_one_num_off(my_ticket, winning_nums)
+	num = []
 	num_of_correct_nums = 0
-	if my_ticket[0] == winning_nums[0][0]
-	num_of_correct_nums+1
+	if my_ticket[0] == winning_nums[0]
+	num_of_correct_nums+=1
 	else 0 
 	end
-	if my_ticket[1] == winning_nums[0][1]
-		num_of_correct_nums+1
+	if my_ticket[1] == winning_nums[1]
+		num_of_correct_nums+=1
 	else 0
 	end 
-	if my_ticket[2] == winning_nums[0][2]
-		num_of_correct_nums+1
+	if my_ticket[2] == winning_nums[2]
+		num_of_correct_nums+=1
 	else 0
 	end
-	if my_ticket[3] == winning_nums[0][3]
+	if my_ticket[3] == winning_nums[3]
+		num_of_correct_nums+=1
 	else 0 
+	if num_of_correct_nums == 3
+		true
+	end
 	end
 	#winning_nums.each do |number|
 	#	(number.first.split(//) & my_ticket.split(//)).size >= 3
@@ -38,22 +43,24 @@ def array_one_num_off(my_ticket, winning_nums)
 	#winning_nums.any? {|w| w.chars & my_ticket_arr).size == 3 }
 end 
 def array_second_num_off(my_ticket, winning_nums)
-	num_of_correct = 0 
+	correct = 0 
 	if my_ticket[0] == winning_nums[1][0]
-		num_of_correct+1
+		correct+=1
 	else 0 
 	end
 	if my_ticket[1] == winning_nums[1][1]
-		num_of_correct+1
+		correct+=1
 	else 0
 	end
 	if my_ticket[2] == winning_nums[1][2]
+		correct +=1
 	else 0
 	end
 	if my_ticket[3] == winning_nums[1][3]
-		num_of_correct+1
+		correct+=1
 	else 0 
 	end
+	p correct
 end
 
 

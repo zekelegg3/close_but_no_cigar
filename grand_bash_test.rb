@@ -27,7 +27,7 @@ class Grand_Bash_test < Minitest::Test
    #end
    def test_custom_strings
    	num1 = "1234"
-   	name2 = ["1234"]
+   	name2 = "1234"
    	assert_equal(4,counting_nums(num1,name2))
    end
 end
